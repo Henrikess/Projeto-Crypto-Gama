@@ -1,3 +1,54 @@
 body{
-    background-color: brown;
+    background:url(../Imagem/v627-aew-01-technologybackground.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+*{
+    font-family: 'Josefin Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+ul{
+    list-style: none;
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 700;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    text-align: center;
+}
+.container .nome h1{
+    font-size: 55px;
+    color: rgb(228, 211, 186);
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.container .nome h5{
+    font-size: 20px;
+    color: rgb(185, 175, 159);
+}
+#arrow{
+    color:azure;
+}
+#about p{
+    margin: 0 auto;
+    max-width: 600px;
+    font-size: 16px;
+    color: rgb(185, 175, 159);
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.form{
+    width: 40%;
+    margin: 0 auto;
+    color: rgb(185, 175, 159);
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.form input{
+    width: 50%;
+}
+.form button{
+    width: 15%;
 }
