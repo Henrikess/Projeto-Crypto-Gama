@@ -15,38 +15,41 @@
 
     <title>Crypto Gama</title>
 
-</head>
+</head> 
 
 <body>
-    <header>
+    <header >
+        <div class="logoback">
+            <img src="../Imagem/Logo.png" alt="Logo Crypto Gama" width="100%" height="100%">
+        </div>     
+        
         <div>
-            <img src="../Imagem/Logo.png" alt="Logo Crypto Gama" width="15%" height="15%">
-        </div>
         <ul>
-            <li>
+            <li class="inlist">
                 <a href="https://github.com/Henrikess" target="blank_">Github</a>
+            </li class="inlist">
+            <li >
+                <a href="mailto:luishenriquesantana92@gmail.com" target="blank_">Email</a>
             </li>
-            <li>
-                <a href="mailto:luishenriquesantana92@gmail.com" target="blank_">Contate-me por e-mail</a>
-            </li>
-            <li>
-                <a href="https://wa.me/5511961845452" target="blank_">Ou por Whatsapp</a>
+            <li class="inlist">
+                <a href="https://wa.me/5511961845452" target="blank_">Whatsapp</a>
             </li>
         </ul>
+        </div>
     </header>
     <main>
         <section class="container">
             <div class="foto">
-                <img src="../Imagem/MinhaFoto.jpeg" alt="minha foto" width="10%" height="10%">
+                <img src="../Imagem/MinhaFoto.jpeg" alt="minha foto" width="11%" height="11%">
             </div>
             <div class="nome">
                 <h1>Luis Henrique S. de Sousa</h1>
                 <h5>Desenvolvedor Crypto</h5>
             </div>
-            <div id="arrow">
-                <i class="fa-solid fa-angles-down"></i>
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-angles-down"></i>
             </div>
-            <div id="about">
+            <div style="display: none;" id="about">
                 <p>
                     Analista/Desenvolvedor procurando pela primeira oportunidade na área de técnologia.
                 </p><br>
@@ -54,17 +57,74 @@
             <div class="form">
                 <div>DEIXE O SEU CONTATO</div>
                 <form action="">
-                    <input type="text" placeholder="Seu melhor e-mail!">
+                    <input type="text" placeholder="Seu melhor e-mail!" ><br>
+                    <button class="button" value="Enviar" alt="botão enviar"> Enviar</button>
                 </form><br><br><br>
             </div>
 
         </section>
+        <div class="cards">
+            <div class="son">
+                <img src="../Imagem/card2.png" alt="Bitcoin" width="280px"  height="280px">
+                <p class="desccard">
+                    <br>O Bitcoin foi desenvolvido em 2008, não se sabe ao certo a sua real origem, a mais aceita é que tenha sido criada por um programador ou grupo de programadores sob o pseudônimo de Satoshi Nakamoto.<br>⠀⠀⠀Bitcoin é considerada a primeira moeda digital mundial descentralizada e pode ser transacionada financeiramente, sem intermediários, mas essas transações são verificadas por todos os usuários (nós) da rede, que são gravadas em um banco de dados distribuídos, chamado de blockchain.
+                </p>
+            </div>
+            <div class="son">
+                <img src="../Imagem/card3.png" alt="Blockchain" width="280px"  height="280px">
+                <p class="desccard">
+                    <br>Blockchain pode ser descrita como uma tecnologia que possibilita através de uma rede de registros de informações distribuídas que sofrem alterações através de blocos de transações protegidas por criptografia, conectados uns aos outros, e que não podem ser alterados ou excluídos depois de sua verificação.                </p>
+            </div>
+            <div class="son">
+                <img src="../Imagem/card1.png" alt="Descentralização" width="280px"  height="280px">
+                <p class="desccard">
+                    <br> A descentralização é o processo de distribuição e dispersão de um foco de poder ou autoridade. Os sistemas financeiros e governamentais que conhecemos atualmente são na grande maioria centralizados, o que significa que existe uma única autoridade máxima responsável por gerenciá-los, como um banco central ou um aparato estatal.
+                    <br>O Bitcoin foi projetado como uma alternativa descentralizada ao dinheiro estatal e, portanto, não tem nenhum ponto de falha, tornando-o mais resiliente, eficiente e democrático. Sua tecnologia subjacente, o Blockchain, é o que permite essa descentralização, pois oferece a cada usuário uma oportunidade de se tornar um dos muitos processadores de pagamento da rede. Desde o aparecimento do Bitcoin, muitas outras criptomoedas ou altcoins apareceram e, na maioria das vezes, eles também usam o Blockchain para conseguir algum grau de descentralização.
+                </p>
+            </div>
+        </div>
 
     </main>
-    <!--<a href='https://br.freepik.com/fotos-vetores-gratis/fundo'>Fundo vetor criado por rawpixel.com - br.freepik.com</a> referir freepik-->
-
-
-
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+            var display2 = document.getElementById('grid');
+            display2.classList.toggle('active');
+        }
+    </script>
+    <footer>
+        <div><p>
+            <!-- Créditos ao criador da imagem utilizada no background-->
+            <a class="ghost" href='https://br.freepik.com/fotos-vetores-gratis/fundo'>Fundo vetor criado por rawpixel.com - br.freepik.com</a><br>
+            <a class="ghost" href='https://cointelegraph.com.br/tags/decentralization'>Fonte sobre descentralização. - cointelegraph.com.br - Demais fontes, Wikipédia.</a> 
+        </p>
+        </div>
+        <div  class="gridbox">
+            <div s class="grid" id="grid">
+                <div class="red" style="background-color: red;"> </div>
+                <div style="background-color: rgb(60, 255, 0);"></div>
+                <div class="blue" style="background-color: rgb(25, 189, 201);"></div>
+                <div style="background-color: rgb(228, 190, 24);"></div>
+                <div style="background-color: rgb(65, 60, 60);"></div>
+                <div class="white" style="background-color: rgb(252, 240, 248);"></div>
+                <div style="background-color: rgb(230, 19, 219);"></div>
+                <div style="background-color: rgb(91, 10, 145);"></div>
+                <div style="background-color: rgb(226, 123, 123);"></div>
+                <div style="background-color: rgb(255, 238, 0);"></div>
+                <div style="background-color: rgb(13, 54, 3);"></div>
+                <div style="background-color: rgb(51, 99, 155);"></div>
+                <div style="background-color: rgb(78, 37, 4);"></div>
+                <div style="background-color: rgb(68, 4, 4);"></div>
+                <div class="green" style="background-color: rgb(65, 243, 11);"></div>
+                <div style="background-color: rgb(70, 252, 221);"></div>
+            </div>
+        
+            <!--<button onclick="displayAbout()" class="button2" style="margin-left: 75px;margin-top: 25px;">Exemplo de grid</button></div>-->
+        </div>  
+    </footer>
 </body>
 
 </html>

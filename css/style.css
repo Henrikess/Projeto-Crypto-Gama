@@ -2,6 +2,15 @@ body{
     background:url(../Imagem/v627-aew-01-technologybackground.jpg) no-repeat center center fixed;
     background-size: cover;
 }
+header{
+   /*border: 3px solid red; border-bottom: 2px solid gray;*/
+    display: flex;
+    justify-content: space-around;
+    background-color: rgba(0, 0, 0, 0.719);
+    align-items: center;
+    box-shadow: 2px 2px 10px 1px rgb(43, 231, 18);
+    
+}
 *{
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
@@ -9,46 +18,218 @@ body{
     box-sizing: border-box;
     font-family: sans-serif;
 }
-ul{
+header ul{
+    display: flex;
+    /*border: 3px solid rgb(43, 231, 18);*/
     list-style: none;
-    font-size: 30px;
+    font-size: 150%;
     font-style: italic;
     font-weight: 700;
+    margin-right: 15px;
+    color: cornsilk;
+    cursor: pointer;
+    
 }
-a{
-    text-decoration: none;
+header ul li{
+    padding: 5px;    
+}
+header ul li a:hover{
+    transition: 300ms;
+}
+header ul li a:hover{
+    color:rgba(43, 231, 18, 0.774);
+    text-decoration: underline;
 }
 .container{
+    margin-top: 150px;
+    border: 3px solid rgba(43, 231, 18, 0.507);
     text-align: center;
+    width: 980px;
+    height: 420px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.658);
+    box-shadow: 2px 2px 15px 10px rgba(43, 231, 18, 0.774);
+    padding: 15px;
 }
 .container .nome h1{
-    font-size: 55px;
+    font-size: 170%;
     color: rgb(228, 211, 186);
     background-color: rgba(0, 0, 0, 0.658);
+    max-width: 600px;
+    margin: 0 auto;
+    
 }
 .container .nome h5{
-    font-size: 20px;
+    font-size: 130%;
     color: rgb(185, 175, 159);
+    background-color: rgba(0, 0, 0, 0.658);
+    max-width: 600px;
+    margin: 0 auto;
 }
 #arrow{
+    margin: 0 auto;
     color:azure;
+    font-size: 30px;
+    cursor: pointer;
+    animation: blink 1500ms steps(5, start) infinite;
+}
+@keyframes blink {
+    to {
+        visibility: hidden;
+    }
+    
+}
+.rotate{
+    transform: rotate(180deg);
+    transition: 300ms;
+}
+.active{
+    display: block !important;
+}
+#animation{
+    transition: 300ms;
+}
+#arrow:hover{
+   color:rgb(43, 231, 18);
 }
 #about p{
     margin: 0 auto;
     max-width: 600px;
-    font-size: 16px;
-    color: rgb(185, 175, 159);
-    background-color: rgba(0, 0, 0, 0.658);
+    font-size: 110%;
+    color: rgb(33, 248, 4);
+    background-color: rgb(5, 0, 0);
 }
 .form{
+    padding: 5px;
     width: 40%;
+    height: 20%;
+    font-size: 90%;
     margin: 0 auto;
-    color: rgb(185, 175, 159);
+    color: rgb(214, 209, 200);
     background-color: rgba(0, 0, 0, 0.658);
 }
 .form input{
     width: 50%;
+    color: rgb(33, 248, 4);
+    background-color: rgb(5, 0, 0);
+    text-align: center;
+    border-radius: 18px 18px 0px 0px;
+    padding: 5px 10px;  
 }
 .form button{
-    width: 15%;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.logoback{
+    background-color: rgba(0, 0, 0, 0.651);
+    max-width: 20%;
+    border-right: 2px solid gray;
+    border-left: 2px solid gray;
+}
+.ghost{
+    font-size: 10px;
+    color: cadetblue;
+}
+.cards{
+    
+    display: flex;
+    justify-content: center;
+
+}
+.son{
+    margin: 30px;
+    border: 3px solid rgb(43, 231, 18);
+    box-shadow: 2px 2px 15px 10px rgba(43, 231, 18, 0.774);
+    height: 100%;
+    background-color: rgb(6, 32, 16);
+    
+}
+.desccard{
+    background-color: rgb(6, 32, 16);
+    color: rgb(196, 181, 158);
+    max-width: 280px; 
+    text-align: center; 
+}
+.button{
+    font-size: 16px;
+    color: rgb(43, 231, 18);
+    border-radius: 0px 0px 18px 18px;
+    border: 3px solid rgb(43, 231, 18);
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 50%;
+    background: linear-gradient(to right, rgb(43, 231, 18)50%,rgb(1, 8, 4) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 300ms ease-out;
+}
+.button2{
+    font-size: 16px;
+    color: rgb(43, 231, 18);
+    border-radius: 18px;
+    border: 3px solid rgb(43, 231, 18);
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 50%;
+    background: rgb(1, 8, 4) ;
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 300ms ease-out;
+}
+.button2:hover{
+    transition: all 300ms;
+    color: black;
+    background: rgb(43, 231, 18);
+    
+
+}
+.button:hover{
+    background-position: left bottom;
+    color: black;
+    font-weight: bolder;
+}
+.inlist{
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.658);
+}
+.grid div{
+    padding: 12px;
+}
+.gridbox{
+    width: 20%;
+    height: 25%;
+    padding: 5px;
+    border: 3px solid rgb(43, 231, 18);
+    background-color: rgba(0, 0, 0, 0.658);
+    
+}
+.red{
+    grid-row:1;
+    grid-column: 3;
+    grid-row-end: 3;
+}
+.blue{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+.white{
+    grid-column-start: 2;
+    grid-column-end: 4;
+}
+.green{
+    grid-row-start: 7;
+    grid-column-start:1;
+    grid-column-end:4;
+}
+.footer{
+    display: flex;
+    justify-content: space-between;
 }
