@@ -283,10 +283,11 @@ header ul li a:hover{
         padding: 5px;
         width: 40%;
         height: 20%;
-        font-size: 90%;
+        font-size: 90%; 
         margin: 0 auto;
         color: rgb(214, 209, 200);
         background-color: rgba(0, 0, 0, 0.658);
+        border-radius: 18px 18px 18px 18px;
 }
     .cadastrar{
         margin-top: 7%;
