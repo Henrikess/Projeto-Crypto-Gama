@@ -24,6 +24,11 @@
                 cadastro.email_cliente.focus();
                 return false;
             }
+            if(senha ==""){
+                alert("Você precisa escolher uma senha!");
+                cadastro.senha_cliente.focus();
+                return false;
+            }
             if(senha != senha2){
                 alert("Você precisa inserir senhas identicas nos dois campos!");
                 cadastro.senha_cliente.focus();
