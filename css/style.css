@@ -4,48 +4,63 @@ body{
 }
 header{
    /*border: 3px solid red; border-bottom: 2px solid gray;*/
-    display: flex;
-    justify-content: space-around;
+    
     background-color: rgba(0, 0, 0, 0.719);
     align-items: center;
-    box-shadow: 2px 2px 10px 1px rgb(43, 231, 18);
     
+}
+header .head{
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 2px 2px 10px 1px rgba(43, 231, 18, 0.774);
 }
 *{
     font-family: 'Josefin Sans', sans-serif;
     padding: 0;
-    margin: 0;
+    margin: 0;  
     box-sizing: border-box;
     font-family: sans-serif;
 }
+.logoback{
+    background-color: rgba(0, 0, 0, 0.651);
+    max-width: 20%;
+    border-right: 2px solid gray;
+    border-left: 2px solid gray;
+}
 header ul{
-    display: flex;
+    margin-top: 100%;
+    margin-left: 10%;
     /*border: 3px solid rgb(43, 231, 18);*/
     list-style: none;
-    font-size: 150%;
+    font-size: 100%;
     font-style: italic;
     font-weight: 700;
-    margin-right: 15px;
     color: cornsilk;
     cursor: pointer;
-    
+     
 }
 header ul li{
     padding: 5px;    
+}
+header ul li a{
+    font-style: none;  
+    list-style: none;
+    color:rgb(106, 179, 118);
+   
 }
 header ul li a:hover{
     transition: 300ms;
 }
 header ul li a:hover{
     color:rgba(43, 231, 18, 0.774);
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 .container{
     margin-top: 150px;
     border: 3px solid rgba(43, 231, 18, 0.507);
     text-align: center;
-    width: 980px;
-    height: 420px;
+    width: 65.5%;
+    height: 30%;
     margin: 0 auto;
     margin-top: 50px;
     background-color: rgba(0, 0, 0, 0.658);
@@ -121,12 +136,6 @@ header ul li a:hover{
     padding: 5px 10px;
     cursor: pointer;
 }
-.logoback{
-    background-color: rgba(0, 0, 0, 0.651);
-    max-width: 20%;
-    border-right: 2px solid gray;
-    border-left: 2px solid gray;
-}
 .ghost{
     font-size: 10px;
     color: cadetblue;
@@ -159,7 +168,7 @@ header ul li a:hover{
     cursor: pointer;
     padding: 5px 10px;
     width: 50%;
-    background: linear-gradient(to right, rgb(43, 231, 18)50%,rgb(1, 8, 4) 50%);
+    background: linear-gradient(to right, rgb(43, 231, 18) 50%,rgb(1, 8, 4) 50%);
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 300ms ease-out;
@@ -232,4 +241,95 @@ header ul li a:hover{
 .footer{
     display: flex;
     justify-content: space-between;
+}
+#mom legend {
+    width: 50%;
+    color: rgb(33, 248, 4);
+    text-align: center;
+    font-size: 200%;
+    background-color: rgba(0, 0, 0, 0.658);
+    
+    
+}
+    #mom {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.658);
+    color: rgb(43, 231, 18);
+    border-radius: 0px 0px 18px 18px;
+    border: 3px solid rgb(43, 231, 18);
+    padding: 10px;
+    }
+    #mom .button3{
+    font-size: 16px;
+    color: rgb(43, 231, 18);
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(43, 231, 18);
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 30%;
+    background: linear-gradient(to right, rgb(43, 231, 18) 50%,rgb(1, 8, 4) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 300ms ease-out;
+    box-shadow: 2px 2px 15px 10px rgba(43, 231, 18, 0.774);
+    }
+    #mom .button3:hover{
+        transition: all 300ms;
+        color: black;
+        background: rgb(43, 231, 18);
+        font-weight: bolder;
+}
+    #mom .inputform{
+        padding: 5px;
+        width: 40%;
+        height: 20%;
+        font-size: 90%;
+        margin: 0 auto;
+        color: rgb(214, 209, 200);
+        background-color: rgba(0, 0, 0, 0.658);
+}
+    .cadastrar{
+        margin-top: 7%;
+        max-width: 600px;
+        font-size: 150%;
+        color: rgb(33, 248, 4);
+
+}
+.cadastrar:hover{
+    color:rgb(211, 218, 211);
+
+}
+@media only screen and (max-width: 480px) {
+    .container {
+        margin-left: 40%;
+        
+    }
+    .container .nome h1{
+        font-size: 20px;
+        
+
+    }
+    .container .nome h5{
+        font-size: 15px;
+        text-align: center;
+    }
+    header{
+        width: 140%;
+    }
+    .form{
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+     
+ 
+    }
+    .form input{
+        width: 140%;
+        margin: 0 auto;
+    }
+    .form button{
+        width: 140%;
+        margin: 0 auto;
+    }
+    
 }

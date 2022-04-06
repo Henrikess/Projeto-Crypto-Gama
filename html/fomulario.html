@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Gama Academy</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script>
+        
+        function valida_campos(){
+            var nome = cadastro.nome_cliente.value;
+            var email = cadastro.email_cliente.value;
+            var senha = cadastro.senha_cliente.value;
+            var senha2 = cadastro.passave.value;
+            //alert(nome);
+            if(nome ==""){
+                alert("Você precisa preencher o seu nome!");
+                cadastro.nome_cliente.focus();
+                return false;
+            }
+            if(email ==""){
+                alert("Você precisa preencher o seu emai!");
+                cadastro.email_cliente.focus();
+                return false;
+            }
+            if(senha != senha2){
+                alert("Você precisa inserir senhas identicas nos dois campos!");
+                cadastro.senha_cliente.focus();
+                return false;
+            }
+        alert(nome+"Mais informações serão enviadas para você no email"+email+".");
+        }
+
+    </script>
+</head>
+<body>
+    <!--Criando um formulario para cadastro de informações  do usuario-->
+    <form id="cadastro" method="post">
+        <fieldset id="mom">
+            <!--Criando uma legenda-->
+                <legend class="leg">Preencha as informações para realizar o cadastro.</legend>
+            <!--Criando uma etiqueta-->   
+                <br><label>Nome do cliente:</label>
+                <input class="inputform" type="text" name="nome_cliente" required placeholder="Digite o seu nome"><br><br>  
+                <label>Email do cliente:</label>
+                <input class="inputform"  type="email" name="email_cliente" required placeholder="exemplo@host.com">  <br><br>  
+            <!--Criando um botão para o envio-->
+                <label>Senha:</label>
+                <input class="inputform" type="password" name="senha_cliente" required placeholder="Digite uma senha"><br><br>
+                <label>Repetir senha:</label>
+                <input class="inputform" type="password" name="passave" required placeholder="Confirme a senha"><br><br>
+                <button class="button3" type="submit" onclick="return valida_campos()" value="Enviar" > Enviar </button>
+        </fieldset>
+            
+            
+
+    </form>
+    
+</body>
+</html>
