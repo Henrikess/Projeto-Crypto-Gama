@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <script>
+        function valida_campos(){
+            //alert('validando');
+            var nomex = document.getElementById('nome').value;
+            var idadex = document.getElementById('idade').value;
+           //alert("Gravando"+nomex);
+            if(nomex ==""){
+                alert("Você precisa preencher o nome!");
+                form.nome.focus();
+                return false;
+            }
+            if(idadex ==""){
+                alert("Você precisa preencher a idade");
+                idadex.focus();
+                return false;
+            }
+            return; //alert('Gravando...');
+        }
+    </script>
+
+
+
+</head>
+<body class="fundo">
+    <form >
+        <fieldset class="mom" id="form">
+            <legend class="leg">Nome e idade</legend><br>
+            <label>Nome:</label>
+            <input type="text" id="nome" class="inputform" required placeholder="Digite o seu nome"><br><br> 
+            <label>Idade:</label>
+            <input type="text" id="idade" class="inputform" required placeholder="Digite a seu nome"><br><br> 
+            <input type="submit" class="button3" onclick="adicionarNome()" value="Enviar">
+        </fieldset>
+    </form>
+    <div class="papel">
+    <p id="apresenta"></p>
+    </div>
+    <script>
+        var registros=prompt('Quantos nomes você gostaria de inserir?')
+
+        const nome = [];
+        const idade = [];
+        let text ='';
+        
+        function adicionarNome(){
+            valida_campos()
+            //alert('validado')
+            if (registros>0){
+                for(let contador=0; contador<registros; contador++){
+                    nome[contador]= document.getElementById("nome").value;
+                    idade[contador]= document.getElementById("idade").value;
+                    document.getElementById("nome").value='';
+                    document.getElementById("idade").value='';
+                    text+=nome[contador]+" tem "+ idade[contador]+" anos <br>";
+                    registros = registros -1;
+                    break
+
+                }document.getElementById('apresenta').innerHTML=text;
+            }else{
+                alert('Fim do limite de Registros')
+            }
+        }
+    </script>
+    
+</body>
+</html>

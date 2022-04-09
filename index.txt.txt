@@ -1,3 +1,37 @@
 ***Apresentação***
 
 O projeto algo, trará algo, só não se sabe o certo o que.
+...Agora já sabemos!
+
+São atividades e material de aprendizado construidos durante o programa CryptoDev da Gama Academy.
+
+
+
+Rascunhos, macetes e dicas --->
+
+=====================================
+Criando uma matriz que contem vários campos
+=====================================
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constantes com mais de um campo</title>
+
+</head>
+<body>
+    <h3>Mostrando o conteúdo de uma matriz com vários campos</h3>
+    <p id="mostra"></p>
+
+    <!-- Criando uma variável que possa conter vários campos-->
+    <script>
+        const aluno={nome:"Ricardo Alexandre",idade:"48",profissao:"Analista de Sistemas"};
+        document.getElementById("mostra").innerHTML=aluno.nome+","+aluno.idade;
+
+    </script>
+</body>
+</html>
