@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+</head>
+<body class="fundo">
+    <div class="clock">
+        <h3 id="hora" style="color: antiquewhite;"></h3>
+    </div>  
+    <script>
+        setInterval(function () {
+            //Criamos uma variavel e atribuimos  a função DATE() 08/04/2022 20:25:37
+            let novaHora = new Date();
+            let hora = novaHora.getHours();
+            let minuto = novaHora.getMinutes();
+            let segundo = novaHora.getSeconds();
+            let dia = novaHora.getDay();
+            let mes = novaHora.getMonth();
+            let ano = novaHora.getFullYear();
+
+            //alert(hora+":"+minuto+":"+Segundo)
+            minuto=zero(minuto);
+            segundo=zero(segundo);
+
+            document.getElementById('hora').textContent=hora+":"+minuto+":"+segundo;          
+        },1000)
+
+        // A Função  zero, permite concatenar a string (numero) 0 e frente ao numeros.
+        //
+        function zero(x){
+            if (x < 10){
+                x = "0" + x;         
+            }return x;
+        }
+    </script>
+</body>
+</html>

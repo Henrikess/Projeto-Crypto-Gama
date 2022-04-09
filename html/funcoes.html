@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de Elementos com JavaScript</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <!--Desenvolvendo funções com JavaScript-->
+</head>
+<body id="background" style="background-color: black;">  
+    <div class="pai">
+        <div><h3 id="black">Sistema de Preenchimento de Informações</h3>
+            <label id="black2">Entre com o nome desejado:</label>
+            <input style="margin-top: 5px; margin-bottom:5px;" type="text" id="inserir_nome">
+            <input type="button" onclick="execute()" value="Processar">
+        </div>
+        <section class="altCor">
+            <div>
+                <img src='../Imagem/amarelo.png' type="submit" id="amarelo" class="botaocor" onclick="trocarCor('amarelo')" />
+                <img src='../Imagem/azul.png' type="submit" id="azul"  class="botaocor" onclick="trocarCor('azul')">
+                <img src='../Imagem/verde.png' type="submit" id="verde"  class="botaocor" onclick="trocarCor('verde')">
+                <img src='../Imagem/vermelho.png' type="submit" id="vermelho" class="botaocor" onclick="trocarCor('vermelho')">
+               
+            </div>
+            <script>
+                function trocarCor(cor){
+                    //alert('trocar cor');
+                    if(cor == 'amarelo'){
+                        var amarelo = document.getElementById('background');
+                        amarelo.style.backgroundColor  = 'rgb(243, 239, 29)';
+                        var corFonte = document.getElementById('campolista');
+                        corFonte.style.color  = 'black';
+                        var corFonte = document.getElementById('campolista2');
+                        corFonte.style.color  = 'black';
+                        var corFonte = document.getElementById('black');
+                        corFonte.style.color  = 'black';
+                        var corFonte = document.getElementById('black2');
+                        corFonte.style.color  = 'black';
+                    }
+                    if(cor == 'azul'){
+                        var azul = document.getElementById('background');
+                        azul.style.backgroundColor  = 'blue';
+                    }
+                    if(cor == 'verde'){
+                        var verde = document.getElementById('background');
+                        verde.style.backgroundColor  = 'green';
+                    }
+                    if(cor == 'vermelho'){
+                        var vermelho = document.getElementById('background');
+                        vermelho.style.backgroundColor  = 'red';
+                    }
+
+                }
+            </script>
+         
+
+        </section>
+        </div>
+    </div>
+    <div class="arrumar">   
+        <!--Criando uma lista de nomes-->
+        <div id="campolista" style="color: antiquewhite;">
+            <ol id="lista">
+            
+            </ol>
+        </div>   
+            <br>
+        <div id="campolista2" style="color: antiquewhite;">
+            <p id="folha" >
+
+            </p>
+        </div>
+    </div>  
+    
+        <script>
+            function execute(){
+                var super_nome=document.getElementById("inserir_nome").value;
+                if(super_nome != ''){
+                    var list_nomes=document.getElementById("lista").innerHTML;
+                    list_nomes=list_nomes+"<li>"+super_nome+"</li>";
+                    document.getElementById("lista").innerHTML=list_nomes;
+                    document.getElementById("inserir_nome").focus();
+                    //alert(super_nome);
+                    var todos_nomes=document.getElementById("folha").innerHTML;
+                    document.getElementById("folha").innerHTML=todos_nomes + super_nome+', ';
+                    document.getElementById("inserir_nome").value='';
+
+                }else{
+                    alert("Para prosseguir com a lista você deve inserir um nome!");
+                    document.getElementById("inserir_nome").focus
+                }        
+                }
+        </script> 
+</body>
+</html>
