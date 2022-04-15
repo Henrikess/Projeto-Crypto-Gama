@@ -1,0 +1,57 @@
+html {
+    background:url(../Imagem/v627-aew-01-technologybackground.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+}fieldset{
+    margin-left: 50px; 
+    margin-right: 50px;
+    display: flex;
+    justify-content: center;
+    border-radius: 8px 8px 8px 8px;
+    border: 3px solid rgb(43, 231, 18);
+}
+html body fieldset #valor{
+    width: 150px;
+    color: rgb(33, 248, 4);
+    border: 3px solid rgb(43, 231, 18);
+    background-color: rgb(5, 0, 0);
+    text-align: center;
+    border-radius: 18px 0px 0px 18px;
+    padding: 5px 10px;  
+}fieldset legend {
+    width: 250px;
+    color: rgb(33, 248, 4);
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(0, 0, 0, 0.658);
+    
+    
+}fieldset #button{
+    font-size: 16px;
+    color: rgb(43, 231, 18);
+    border-radius: 0px 18px 18px 0px;
+    border: 3px solid rgb(43, 231, 18);
+    cursor: pointer;
+    padding: 5px 10px;
+    width: 150px;
+    background: linear-gradient(to right, rgb(43, 231, 18) 50%,rgb(1, 8, 4) 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 300ms ease-out;
+    box-shadow: 2px 2px 15px 10px rgba(43, 231, 18, 0.774);
+    }
+    fieldset #button:hover{
+        transition: all 300ms;
+        color: black;
+        background: rgb(43, 231, 18);
+        font-weight: bolder;
+}div{
+   color: rgb(71, 252, 16);
+   background-color: black;
+   text-align: center;
+   margin-left: 50px; 
+   margin-top: 25px;
+   margin-right: 50px;
+   border-radius: 12px 12px 12px 12px;
+   border: 1px solid rgb(43, 231, 18);
+}

@@ -12,7 +12,10 @@
             var nomex = document.getElementById('nome').value;
             var idadex = document.getElementById('idade').value;
            //alert("Gravando"+nomex);
-            if(nomex ==""){
+           if(registros == 0){
+            return false;
+            }
+           if(nomex ==""){
                 alert("Você precisa preencher o nome!");
                 form.nome.focus();
                 return false;
@@ -21,7 +24,7 @@
                 alert("Você precisa preencher a idade");
                 idadex.focus();
                 return false;
-            }
+            } 
             return; //alert('Gravando...');
         }
     </script>
@@ -51,9 +54,9 @@
         let text ='';
         
         function adicionarNome(){
-            valida_campos()
             //alert('validado')
             if (registros>0){
+                valida_campos()
                 for(let contador=0; contador<registros; contador++){
                     nome[contador]= document.getElementById("nome").value;
                     idade[contador]= document.getElementById("idade").value;
