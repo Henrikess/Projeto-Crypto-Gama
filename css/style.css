@@ -438,6 +438,14 @@ header ul li a:hover{
     margin-bottom: 20%;
 }.matriz:hover{
     color:rgb(211, 218, 211);
+}.calculadora{
+    max-width: 600px;
+    max-height:50px;
+    font-size: 100%;
+    color: rgb(33, 248, 4);
+    margin-bottom: 20%;
+}.calculadora:hover{
+    color:rgb(211, 218, 211);
 }.geradortab{
     max-width: 600px;
     max-height:50px;

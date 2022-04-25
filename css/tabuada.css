@@ -55,3 +55,23 @@ html body fieldset #valor{
    border-radius: 12px 12px 12px 12px;
    border: 1px solid rgb(43, 231, 18);
 }
+@media only screen and (max-width: 480px) {
+    fieldset{
+        margin-left: 1%; 
+        margin-right: 1%;
+        display: flex;
+        justify-content: center;
+        border-radius: 8px 8px 8px 8px;
+        border: 3px solid rgb(43, 231, 18);
+    }fieldset legend {
+        width: 200px;
+        color: rgb(33, 248, 4);
+        text-align: center;
+        font-size: 23px;
+        background-color: rgba(0, 0, 0, 0.658);
+    }fieldset #button{
+        font-size: 14px;
+        width: 130px;
+
+    }
+}

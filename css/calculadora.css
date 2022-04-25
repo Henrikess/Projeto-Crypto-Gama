@@ -1,0 +1,495 @@
+body{
+    background:url(../Imagem/v627-aew-01-technologybackground.jpg) no-repeat center center fixed;
+    background-size: cover;
+}#display3{
+    height: 50px;
+    font-size: 60px;
+}.rodape{
+    margin-top: 10%;
+}.containerC{
+    border-radius: 18px 18px 18px 18px;
+    margin: 0 auto ;
+    margin-top:  1%;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 25%;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(26,51,23,1) 100%);   
+
+}#btnodel{
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border: 3px solid rgb(230, 58, 58);
+    font-size:medium;
+    background: rgb(131, 8, 8);
+    background: radial-gradient(circle, rgb(155, 48, 48) 0%, rgb(112, 24, 24) 100%);  
+    text-align: center;
+    font-size:medium;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 70px;
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 6%;
+    margin-right: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(92, 102, 105);
+
+}#btnodel2{
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border: 3px solid rgb(255, 28, 28);
+    font-size:medium;
+    background: rgb(255, 18, 18);
+    background: radial-gradient(circle, rgb(99, 32, 32) 0%, rgb(247, 48, 48) 100%); 
+    box-shadow: 1px 1px 10px 5px rgba(252, 41, 41, 0.979); 
+    text-align: center;
+    font-size: medium;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 70px;
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 6%;
+    margin-right: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(228, 43, 11);
+
+}.funcoes{
+    border-radius: 18px 18px 18px 18px;
+    width: 80px;
+    height: 300px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(26,51,23,1) 100%);  
+}#display2{
+    font-size: 22px;
+}.btnReset{
+    text-align: center;
+    font-size:small;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 75px;
+    height: 30px;
+    background: rgb(155, 6, 6);
+    background: radial-gradient(circle, rgb(165, 43, 43) 0%, rgb(216, 68, 42) 100%);
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(202, 195, 195);
+}#btnReset2{
+    text-align: center;
+    font-size:x-small;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(255, 64, 64);
+    width: 75px;
+    height: 30px;
+    background: rgb(41, 36, 36);
+    background: radial-gradient(circle, rgb(46, 29, 29) 0%, rgb(5, 4, 3) 100%);
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(255, 26, 26);
+    box-shadow: 2px 2px 10px 5px rgba(252, 41, 41, 0.979);
+}#carousel{
+    display:flex;
+    justify-content: center;
+    margin: 0 auto ;
+    text-align: center;
+    
+}.btnFunc{
+    text-align: center;
+    font-size: x-large;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 70px;
+    height: 45px;
+    background: rgba(21, 20, 53, 0.911);
+    background: radial-gradient(circle, rgb(43, 43, 80) 0%, rgb(6, 28, 53) 100%);
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 6%;
+    margin-right: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(16, 137, 185);
+}#btnFunc2{
+    text-align: center;
+    font-size: x-large;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 70px;
+    height: 45px;
+    background: rgba(61, 55, 236, 0.911);
+    background: radial-gradient(circle, rgb(130, 130, 206) 0%, rgb(38, 97, 163) 100%);
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 6%;
+    margin-right: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(35, 221, 206);
+    box-shadow: 2px 2px 10px 5px rgb(35, 221, 206);
+}.btnCalc{
+    font-size: x-large;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 70px;
+    height: 60px;
+    background: rgb(7, 56, 14);
+    background: radial-gradient(circle, rgb(28, 97, 22) 0%, rgb(20, 49, 20) 100%);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(43, 231, 18);
+}#btnCalc2{
+    font-size: x-large;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(83, 255, 40);
+    width: 70px;
+    height: 60px;
+    background: rgb(4, 31, 8);
+    background: radial-gradient(circle, rgb(20, 65, 16) 0%, rgb(14, 32, 14) 100%);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 5px solid rgb(43, 231, 18);
+    box-shadow: 3px 5px 10px 5px rgba(54, 250, 28, 0.705);
+}
+.base{
+    display:flex;
+    justify-content: center;
+    background: rgb(55,103,49);
+    background: radial-gradient(circle, rgba(55,103,49,1) 0%, rgba(0,0,0,1) 100%);
+    margin: 0 auto ;
+    width: 50%;
+    height: 50%;
+    padding: 2%;
+    border-radius: 0px 0px 18px 18px;
+    border: 3px solid rgb(0, 0, 0);
+}.tela{
+    border-bottom:0ch;
+    border-radius: 18px 18px 0px 0px;
+    border: 3px solid rgb(0, 0, 0);
+    text-align: center;
+    font-size: 80px;
+    background: rgb(213,255,249);
+    background: radial-gradient(circle, rgba(213,255,249,1) 0%, rgba(78,193,123,1) 100%);
+    margin: 0 auto ;
+    margin-top:  7%;
+    width: 50%;
+    height: 300px;
+    padding: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+}
+@media only screen and (max-width: 1190px) {
+    .tela{
+         font-size: 50px;
+         border-bottom:0ch;
+         border-radius: 18px 18px 0px 0px;
+         border: 3px solid rgb(0, 0, 0);
+         text-align: center;
+         background: rgb(213,255,249);
+         background: radial-gradient(circle, rgba(213,255,249,1) 0%, rgba(78,193,123,1) 100%);
+         margin: 0 auto ;
+         margin-top:  7%;
+         width: 70%;
+         height: 300px;
+         padding: 2%;
+         font-family: 'Josefin Sans', sans-serif;
+    }.base{
+        display:flex;
+        justify-content: center;
+        background: rgb(55,103,49);
+        background: radial-gradient(circle, rgba(55,103,49,1) 0%, rgba(0,0,0,1) 100%);
+        margin: 0 auto ;
+        width: 70%;
+        height: 50%;
+        padding: 2%;
+        border-radius: 0px 0px 18px 18px;
+        border: 3px solid rgb(0, 0, 0);
+    }
+}
+@media only screen and (max-width: 720px) {
+    .tela{
+        font-size: 50px;
+        border-bottom:0ch;
+        border-radius: 18px 18px 0px 0px;
+        border: 3px solid rgb(0, 0, 0);
+        text-align: center;
+        background: rgb(213,255,249);
+        background: radial-gradient(circle, rgba(213,255,249,1) 0%, rgba(78,193,123,1) 100%);
+        margin: 0 auto ;
+        margin-top:  7%;
+        width: 80%;
+        height: 300px;
+        padding: 2%;
+        font-family: 'Josefin Sans', sans-serif;
+   }.base{
+       display:flex;
+       justify-content: center;
+       background: rgb(55,103,49);
+       background: radial-gradient(circle, rgba(55,103,49,1) 0%, rgba(0,0,0,1) 100%);
+       margin: 0 auto ;
+       width: 80%;
+       height: 50%;
+       padding: 2%;
+       border-radius: 0px 0px 18px 18px;
+       border: 3px solid rgb(0, 0, 0);
+   }
+}
+@media only screen and (max-width: 520px) {
+    .tela{
+        font-size: 40px;
+        border-bottom:0ch;
+        border-radius: 18px 18px 0px 0px;
+        border: 3px solid rgb(0, 0, 0);
+        text-align: center;
+        background: rgb(213,255,249);
+        background: radial-gradient(circle, rgba(213,255,249,1) 0%, rgba(78,193,123,1) 100%);
+        margin: 0 auto ;
+        margin-top:  7%;
+        width: 108%;
+        height: 300px;
+        padding: 2%;
+        font-family: 'Josefin Sans', sans-serif;
+   }.base{
+       display:flex;
+       justify-content: center;
+       background: rgb(55,103,49);
+       background: radial-gradient(circle, rgba(55,103,49,1) 0%, rgba(0,0,0,1) 100%);
+       margin: 0 auto ;
+       width: 108%;
+       height: 50%;
+       padding: 2%;
+       border-radius: 0px 0px 18px 18px;
+       border: 3px solid rgb(0, 0, 0);
+   }
+}@media only screen and (max-width: 360px) {
+    .tela{
+        font-size: 40px;
+        border-bottom:0ch;
+        border-radius: 18px 18px 0px 0px;
+        border: 3px solid rgb(0, 0, 0);
+        text-align: center;
+        background: rgb(213,255,249);
+        background: radial-gradient(circle, rgba(213,255,249,1) 0%, rgba(78,193,123,1) 100%);
+        margin: 0 auto ;
+        margin-top:  7%;
+        width: 108%;
+        height: 300px;
+        padding: 2%;
+        font-family: 'Josefin Sans', sans-serif;
+   }.base{
+       display:flex;
+       justify-content: center;
+       background: rgb(55,103,49);
+       background: radial-gradient(circle, rgba(55,103,49,1) 0%, rgba(0,0,0,1) 100%);
+       margin: 0 auto ;
+       width: 108%;
+       height: 50%;
+       padding: 2%;
+       border-radius: 0px 0px 18px 18px;
+       border: 3px solid rgb(0, 0, 0);
+   }
+}#display3{
+    height: 50px;
+    font-size: 60px;
+}.rodape{
+    margin-top: 10%;
+}.containerC{
+    border-radius: 18px 18px 18px 18px;
+    margin: 0 auto ;
+    margin-top:  1%;
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    height: 25%;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(26,51,23,1) 100%);   
+
+}#btnodel{
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border: 3px solid rgb(230, 58, 58);
+    font-size:medium;
+    background: rgb(131, 8, 8);
+    background: radial-gradient(circle, rgb(155, 48, 48) 0%, rgb(112, 24, 24) 100%);  
+    text-align: center;
+    font-size:medium;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 55px;
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 3%;
+    margin-right: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(92, 102, 105);
+
+}#btnodel2{
+    height: 35px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    border: 3px solid rgb(255, 28, 28);
+    font-size:medium;
+    background: rgb(255, 18, 18);
+    background: radial-gradient(circle, rgb(99, 32, 32) 0%, rgb(247, 48, 48) 100%); 
+    box-shadow: 1px 1px 10px 5px rgba(252, 41, 41, 0.979); 
+    text-align: center;
+    font-size: medium;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 55px;
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 3%;
+    margin-right: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(228, 43, 11);
+
+}.funcoes{
+    border-radius: 18px 18px 18px 18px;
+    width: 65px;
+    height: 300px;
+    background: rgb(0,0,0);
+    background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(26,51,23,1) 100%);  
+}#display2{
+    font-size: 22px;
+}.btnReset{
+    text-align: center;
+    font-size:small;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 55px;
+    height: 30px;
+    background: rgb(155, 6, 6);
+    background: radial-gradient(circle, rgb(165, 43, 43) 0%, rgb(216, 68, 42) 100%);
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(202, 195, 195);
+}#btnReset2{
+    text-align: center;
+    font-size:x-small;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(255, 64, 64);
+    width: 55px;
+    height: 30px;
+    background: rgb(41, 36, 36);
+    background: radial-gradient(circle, rgb(46, 29, 29) 0%, rgb(5, 4, 3) 100%);
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 3%;
+    margin-right: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(255, 26, 26);
+    box-shadow: 2px 2px 10px 5px rgba(252, 41, 41, 0.979);    
+}.btnFunc{
+    text-align: center;
+    font-size: x-large;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 55px;
+    height: 35px;
+    background: rgba(21, 20, 53, 0.911);
+    background: radial-gradient(circle, rgb(43, 43, 80) 0%, rgb(6, 28, 53) 100%);
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 3%;
+    margin-right: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(16, 137, 185);
+}#btnFunc2{
+    text-align: center;
+    font-size: x-large;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 55px;
+    height: 35px;
+    background: rgba(61, 55, 236, 0.911);
+    background: radial-gradient(circle, rgb(130, 130, 206) 0%, rgb(38, 97, 163) 100%);
+    margin-top: 3%;
+    margin-bottom: 8%;
+    margin-left: 3%;
+    margin-right: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(35, 221, 206);
+    box-shadow: 2px 2px 10px 5px rgb(35, 221, 206);
+}.btnCalc{
+    font-size: x-large;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(194, 186, 186);
+    width: 55px;
+    height: 45px;
+    background: rgb(7, 56, 14);
+    background: radial-gradient(circle, rgb(28, 97, 22) 0%, rgb(20, 49, 20) 100%);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 3px solid rgb(43, 231, 18);
+}#btnCalc2{
+    font-size: x-large;
+    font-style:oblique;
+    font-weight: 600;
+    color: rgb(83, 255, 40);
+    width: 55px;
+    height: 45px;
+    background: rgb(4, 31, 8);
+    background: radial-gradient(circle, rgb(20, 65, 16) 0%, rgb(14, 32, 14) 100%);
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Josefin Sans', sans-serif;
+    border-radius: 18px 18px 18px 18px;
+    border: 5px solid rgb(43, 231, 18);
+    box-shadow: 3px 5px 10px 5px rgba(54, 250, 28, 0.705);
+}
