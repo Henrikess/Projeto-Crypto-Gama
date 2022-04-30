@@ -1,4 +1,5 @@
 function AcenderBotãoN(str){
+    //Responsável pelo efeito visual de acender os botões pressionados.
     if(str == 'o.'){str = 'Ponto'}
     if(str == 'oreset'){str = 'Reset'}
     console.log('A str :', str)
@@ -35,121 +36,139 @@ function AcenderBotãoN(str){
     }
 
 }
+/*function imc(){
+    let display3 = document.getElementById('display3').innerHTML
+    let display2 = document.getElementById('display2').innerHTML
+    let display1 = document.getElementById('display1').innerHTML
+    if(display3 != ''){display3 = '';}
+    if(display2 != ''){display3 = '';}
+    if(display1 != ''){display3 = '';}
+    document.getElementById('display2').innerHTML = "Bem vindo ao cálculo de IMC";
+    setTimeout(() => {
+        document.getElementById('display2').innerHTML = "Para começar, digite o seu peso:";
+    }, 2500)
+    setTimeout(() => {
+        document.getElementById('display2').innerHTML = "Depois, insira uma '/' e informe a sua alutura";
+    }, 10000)
+}*/
 function Calcular() {
-    console.log(Number.isNaN(document.getElementById('display1').innerHTML))
-    var x = document.getElementById('display2').innerHTML;
-    console.log('este é x',x)
-    if(x){
-        console.log('Calculo capturado:', x);
-        resultado = eval(x);
-        if(resultado == NaN){
-            return '0';
-         }
-        else if(Number.isInteger(resultado)){
-            console.log('Resultado do calculo:', resultado);
-            //if(resultado.length > 12){
-           
-            return resultado;
-            
-        }else{
-            console.log('Resultado do calculo:', resultado);
+    let display3 = document.getElementById('display3').innerHTML;
+    if(display3 == 'Para começar, digite o seu peso:' ){console.log('IMC AQUI')}
+    //Responsável por realizar o cálculo da string presente do display3
+    let contDisplay2 = document.getElementById('display2').innerHTML;
+    //console.log('este é o contéudo do display2:',contDisplay2)
+    if(contDisplay2){//Verifica se existe conteudo no display2
+        //console.log('Calculo capturado:', contDisplay2);
+        let resultado = eval(contDisplay2);
+        resultado = resultado.toString();
+      //  resultado.length > 13 ? input função erroC
+        if(resultado == NaN){return '0';}
+        else{
+            resultado = parseFloat(resultado);
+            //console.log('Resultado do calculo:', resultado);
             resultado = parseFloat(resultado.toFixed(6));
+            if(resultado == 'Infinity'){resultado = 'Infinito!';}
+            if(resultado == 'NaN'){resultado = 'Infinito!';}
             return resultado;
             }                  
     
     }else{
         document.getElementById('display1').innerHTML = '0';
     }
-}
-function Scanumber (){
-    const valor = document.getElementById('display1');
-    return valor;
+
 }
 function CheckClean(){
-    document.getElementById('display1').textContent = '0';
-    
+    //Transforma o conteúdo do display1 em 0
+    document.getElementById('display1').textContent = '0';  
 }
 function ZeroClean (text){
-    let x = document.getElementById('display1').textContent;
-    let y = document.getElementById('display2').textContent;
-    const str = x
+    //Verifica a necessidade de incremento de zero e de pontos na string, caso contrario o elemento não é inserido
+    let contDisplay1= document.getElementById('display1').textContent;
+    const str = contDisplay1
     const str2 = str.charAt(str.length -1);
-    console.log("O ultimo char do display1 é:", str2);
-    console.log("O texto é:", text);
+    //console.log("O ultimo char do display1 é:", str2);
+    //console.log("A string recebida na função é:", text);
     
-    if(str2 == '.' & text == '.'){
+    if(str2 == '.' & text == '.'){//Evita a inclusão de um segundo ponto
         
         Del();
     }
     
-    if(x.includes('0.') ){
-        console.log('O display1 contem:',x)
+    if(contDisplay1.includes('0.') ){//Evita um erro na aplicação. (O texto zero pode receber ponto para operações com valores reais.)
+        //console.log('O display1 contem:',contDisplay1)
         return;
      }
-    else if( Number(x) == 0 & x != '0.'){
-        if(text == '.'){
+    else if( Number(contDisplay1) == 0 & contDisplay1 != '0.'){//Caso o display1 contenha apenas zero e seja diferente de de 0. (esperando a operação float)
+        if(text == '.'){//Confirmando que o texto é um ponto, retornamos sem impedir a inclusão do zero.
             return;
         }else{
-            console.log('Tem um zero', x);
+            //console.log('Tem um zero', contDisplay1);
             document.getElementById('display1').textContent = '';
         }
         
     }
-    if(document.getElementById('display3').textContent == '='){
-        document.getElementById('display1').textContent = '0';
-        document.getElementById('display2').textContent = '';
-        document.getElementById('display3').textContent = '⠀';
+    if(document.getElementById('display3').textContent == '='){//Caso a operação do display3 identifique que o display2 mostre um resultado anterior, reseta para um novo cálculo.
+        document.getElementById('display1').textContent='0'
+        document.getElementById('display2').textContent='' 
     }
  }
-function Inserir(str){
-    const display1 = document.getElementById('display1').innerHTML;
-    if(display1.includes('.') & str == '.'){
+function Inserir(str){//Adiciona o texto de acordo com a incerção identificada
+    function Concatenar(str){
+        display1Text =  document.getElementById('display1').innerHTML;
+        document.getElementById('display1').innerHTML = display1Text + str;
+    }
+    let display1 = document.getElementById('display1').innerHTML;
+    let display3 = document.getElementById('display3').innerHTML;
+    if(display1 == '0.'){
+        Concatenar(str); 
+        document.getElementById('display3').innerHTML = ''
+        return; }
+    console.log('tem isso no display1:', display1);
+    if((display1 == '' || display1 == NaN|| display1 == '0' || display3 == '=') & str == '.'){
+        display1 = '0.';
+        document.getElementById('display1').innerHTML = display1;
+        return;
+    }
+    if(display1.includes('.') & str == '.'){//Verifia se o display1 já possui um ponto.
         console.log('O display1 contem:',display1 ,'JÁ EXISTE UM PONTO!')
         return;
      }
-    if(display1.length > 12){return;}
-    const display3 = document.getElementById('display3').innerHTML;
-    if(display3 == '='){
-        document.getElementById('display1').innerHTML = '';
+    if(display1.length > 12){return;}//Verifica se o tamanho da string presente do display1 é menor que 12 (Valor max de incerção).
+    if(display3 == '='){//Caso o display1 seja o resultado de uma operação anterior
+        document.getElementById('display1').innerHTML = str;
         document.getElementById('display2').innerHTML = '';
+        document.getElementById('display3').textContent='⠀'   
+    }else{
+    //console.log('display3:',display3);
+        Concatenar(str);
     }
-    console.log(display1,'+',str);
-    display1Text =  document.getElementById('display1').innerHTML;
-    document.getElementById('display1').innerHTML = display1Text + str;
-   
 }
-function InserirCalculo(str, op){
+function InserirCalculo(str, op){//Função que une os dados entre os displays, unindo-os no display2 (Preparação para o cálculo)
+    let display1 = document.getElementById('display1').innerHTML;
+    //if(display1.includes('e')){Reset(); return;} 
     let display3 = document.getElementById('display3').innerHTML;
-  
-    if(display3 == '='){
+    if(display3 == '='){//Verifica se o conteudo do display1 é o resultado de uma operação anterior
         let display1 = document.getElementById('display1').innerHTML;
-        console.log('Display 3 é = ', display3);
+        //console.log('Display 3 é = ', display3);
         document.getElementById('display1').innerHTML = '';
         console.log('Display 1 é = ', display1);
         document.getElementById('display2').innerHTML = display1 + op;
         document.getElementById('display3').textContent = op;
     }else{
     display2Text =  document.getElementById('display2').innerHTML;
-    concText = str + op;
-    if(display3 == '+' ||display3 == '-' ||display3 == '/' ||display3 == '*' ||display3 == '%'){
+    concText = str + op;//Texto concatenado da string recebida + a operção selecionada pela incerssão
+    if(display3 == '+' ||display3 == '-' ||display3 == '/' ||display3 == '*' ||display3 == '%'){//Verifica a existencia de uma operação anterior no display3 Se houve uma segunda incerssão de operação a anterior é substituida.
         let str = document.getElementById('display2').innerHTML;
         str2 = str.substr(0,str.length -1);
         document.getElementById('display2').innerHTML == str2 + op;
         console.log('Valor no display3:', display3,"Display2 antes:",str,'Display2 agora:', str2)
     }
-    if(concText == "0-" ||concText == "0+"||concText == "0*"||concText == "0%"||concText == "0/"){
-        let str = document.getElementById('display2').innerHTML;
-        str2 = str.substr(0,str.length - 1);
-        console.log('Str2 está:', str2);
-        document.getElementById('display2').innerHTML = str2 + op;
-        document.getElementById('display3').textContent = op;
-    }else{
         document.getElementById('display2').innerHTML = display2Text + str + op;
         document.getElementById('display3').textContent = op;
-    }
+    
 
 }}
-function Numbers(n){
+function Numbers(n){//Função de incerssão de números
         AcenderBotãoN(n)
         switch(n){
             case  'n1':
@@ -242,7 +261,7 @@ function Numbers(n){
                 // tecla , . ,numpad
     }
 }
-function Funcoes(f){
+function Funcoes(f){//Operadores e funções da calculadora
     AcenderBotãoN(f)
     switch(f){
 
@@ -283,6 +302,15 @@ function Funcoes(f){
                 break;
             // tecla / ou /numpad
 
+            case 'o%':
+                console.log('%');
+                op = '%';
+                valor1 = parseFloat(document.getElementById('display1').textContent);
+                InserirCalculo(valor1, op)
+                CheckClean()
+                break;
+                // tecla / ou /numpad
+
             case 'odel':
                 console.log('Tecla Del pressionada');
                 Del();
@@ -290,12 +318,15 @@ function Funcoes(f){
                 break;
 
             case 'o=':
+                let display3 = document.getElementById('display3').innerHTML
+                if(display3 == '='){break;}// Não realiza o cálculo, caso o conteúdo do display1 seja um resultado.
                 //implementar impressao do historico{  
                 valor1 = parseFloat(document.getElementById('display1').textContent);
+                let display2 = document.getElementById('display2').innerHTML;
                 InserirCalculo(valor1,'');
                 document.getElementById('display1').textContent = Calcular();
                 text = '=';
-                document.getElementById('display2').textContent = document.getElementById('display1').textContent;
+                document.getElementById('display2').textContent = display2 + valor1 + '='+ document.getElementById('display1').textContent;
                 document.getElementById('display3').textContent = text;
     
 
@@ -311,23 +342,22 @@ function Funcoes(f){
 
     }
 }
-function Reset(){
+function Reset(){//Reseta a aplicação para o estado original
     document.getElementById('display1').textContent='0'
     document.getElementById('display2').textContent='' 
-    document.getElementById('display3').textContent='⠀'   
+    document.getElementById('display3').textContent='⠀'
+   
 }
-function Del(){
+function Del(){//Deleta o ultimo elemento inserido.
     const display3 = document.getElementById('display3').innerHTML;
     const display1 = document.getElementById('display1').innerHTML;
     
-    if(display3 == '='){
+    if(display3 == '='){//Caso identificado que o valor do display1 é um resultade de operação anterior, reseta ao invés de deletar.
         console.log('Display 1 contem:', display1);
-        document.getElementById('display1').innerHTML = '0'; 
-        document.getElementById('display2').innerHTML = ''; 
-        document.getElementById('display3').innerHTML = '⠀'; 
+        Reset();
         return;
     }
-    else if(display1.length <1 || display1 == '' || display1 == '0' ){
+    else if(display1.length <1 || display1 == '' || display1 == '0' ){//Case seja o ultimo elemento da string, é inserido um zero no display1 (Evita valores indefinidos,NaN no cálculo)
         document.getElementById('display1').innerHTML = '0'; 
         return;
     }
@@ -341,13 +371,13 @@ function Del(){
        
         console.log(document.getElementById("display1").innerHTML)
      
-    }if(Number.isNaN(document.getElementById('display1').innerHTML)){
+    }if(Number.isNaN(document.getElementById('display1').innerHTML)){//Nova verificação de valor no display1, caso não exista é inserido um zero
         console.log('Display1 não tem um número',Number.isNaN(document.getElementById('display1').innerHTML))
         document.getElementById('display1').innerHTML = '0';
     }console.log('Display1:', display1)
     if(display1 == '' || display1 == NaN){document.getElementById('display1').innerHTML = '0'}
 }
-function Screen() {
+function Screen() {//Função principal da calculadora. Responsável por indentificar as incerssões e chamar as funções correspondentes.
     
     document.getElementById('display1').textContent = '0';
     valor1 ='' ;
@@ -390,166 +420,5 @@ function Screen() {
 
     })
 }
-function Botoes(str){
-    AcenderBotãoN(str);
-
-    switch(str){
-        case  'n1':
-            ZeroClean();
-            text ='1'
-            Inserir(text);
-            break;
-            // tecla 1
-
-        case 'n2':
-            ZeroClean()
-            text ='2'
-            Inserir(text);
-            break;
-        // tecla 2
-
-        case 'n3':
-            ZeroClean();
-            text ='3'
-            Inserir(text);
-            break;
-        // tecla 3
-
-        case 'n4':
-            ZeroClean();
-            text ='4'
-            Inserir(text);
-            break;
-        // tecla 4
-
-        case 'n5':
-            ZeroClean();
-            text ='5'
-            Inserir(text);
-            break;
-        // tecla 5
-
-        case 'n6':
-            ZeroClean();
-            text ='6'
-            Inserir(text);
-            break;
-        // tecla 6
-
-        case 'n7':
-            ZeroClean();
-            text ='7'
-            Inserir(text);
-            break;
-        // tecla 7
-
-        case 'n8':
-            ZeroClean();
-            text ='8'
-            Inserir(text);
-            break;
-        // tecla 8
-
-        case 'n9':
-            ZeroClean(); 
-            text ='9'
-            Inserir(text);
-            break;
-        // tecla 9
-
-        case 'n0':
-            ZeroClean()
-            text ='0'
-            Inserir(text);
-           /* console.log("0", document.getElementById("display1"));
-            //criando novo texto para ser inserido
-            text = "0";
-            //Preparando texto anterior para concatenar.
-            cText = document.getElementById("display2").textContent;
-            // Atribuindo texto concatenado ao campo
-            document.getElementById("display2").textContent = cText + text;
-            //Fazendo a mesama coisa para o outro display
-            nText = document.getElementById("display1").textContent;
-            document.getElementById("display1").textContent = nText + text;
-            text = "";  */
-            break;
-
-            // tecla 0
-        case 'Ponto':
-            text ='.'
-            ZeroClean(text); 
-            Inserir(text);
-            break;
-
-        case 'o*':
-            console.log('*');
-            op = '*';
-            //Capturando o primeiro produto para a operação
-            valor1 = parseFloat(document.getElementById('display1').textContent);
-            InserirCalculo(valor1, op)
-            CheckClean()
-            break;
-            // tecla */*numpad
-
-        case 'o-':
-            console.log('-');
-            op = '-';
-            valor1 = parseFloat(document.getElementById('display1').textContent);
-            InserirCalculo(valor1, op)
-            CheckClean()
-            break;
-            // tecla -/-numpad
-
-        case 'o+':
-            console.log('+');
-            op = '+';
-            valor1 = parseFloat(document.getElementById('display1').textContent);
-            InserirCalculo(valor1, op)
-            CheckClean()
-            break;
-        // tecla +/+numpad
-
-        case 'o/':
-            console.log('/');
-            op = '/';
-            valor1 = parseFloat(document.getElementById('display1').textContent);
-            InserirCalculo(valor1, op)
-            CheckClean()
-            break;
-            // tecla / ou /numpad
-        case 'o%':
-                console.log('%');
-                op = '%';
-                valor1 = parseFloat(document.getElementById('display1').textContent);
-                InserirCalculo(valor1, op)
-                CheckClean()
-                break;
-                // tecla / ou /numpad
-
-        case 'odel':
-            console.log('Tecla del pressionada')
-            Del();
-            // tecla del, <- , backspace 
-            break;
-
-        case 'o=':
-            //implementar impressao do historico{  
-            valor1 = parseFloat(document.getElementById('display1').textContent);
-            InserirCalculo(valor1,'');
-            document.getElementById('display1').textContent = Calcular();
-            text = '=';
-            document.getElementById('display2').textContent = document.getElementById('display1').textContent;
-            document.getElementById('display3').textContent = text;
-            break;
-            // tecla Enter, =
-
-        case 'Reset':
-            console.log('Reset');
-            Reset();
-            //location.reload();
-            break;
-            // tecla esc
-    }
-}
-Screen()
+Screen()//Execução da aplicação através da função Screen
 

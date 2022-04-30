@@ -4,6 +4,12 @@ body{
 }#display3{
     height: 50px;
     font-size: 60px;
+}#display2{
+    max-width: 90%;
+    text-align: left;
+}#display1{
+    max-width: 90%;
+    margin: 0 auto;
 }.rodape{
     margin-top: 10%;
 }.containerC{
@@ -208,7 +214,7 @@ body{
     padding: 2%;
     font-family: 'Josefin Sans', sans-serif;
 }
-@media only screen and (max-width: 1190px) {
+@media only screen and (max-width: 1581px) {
     .tela{
          font-size: 50px;
          border-bottom:0ch;
