@@ -4,12 +4,13 @@ body{
 }#display3{
     height: 50px;
     font-size: 60px;
+    text-align: right;
 }#display2{
     max-width: 90%;
-    text-align: left;
+    text-align: right;
 }#display1{
     max-width: 90%;
-    margin: 0 auto;
+    text-align: right;
 }.rodape{
     margin-top: 10%;
 }.containerC{
