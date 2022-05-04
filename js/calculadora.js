@@ -64,7 +64,13 @@ function Calcular(display2,display3,valor) { // Função de cálculo. Concatena 
             resultado = parseFloat(resultado);
             //console.log('Resultado do calculo:', resultado);
             resultado = parseFloat(resultado.toFixed(6));
-            if(resultado == 'Infinity'){resultado = 'Infinito!';}// Retorna infinito no caso de infinity / pt-br 
+            if(resultado == 'Infinity'){
+                resultado = 'Infinito!';
+                setTimeout(() => {
+                    Reset();
+                    return;
+                }, 3000)
+            }// Retorna infinito no caso de infinity / pt-br 
             if(sub != display3){document.getElementById('display2').textContent = display2 + display3 + valor1 + '='+ resultado;
             }else{
                 document.getElementById('display2').textContent = display2 + valor + '='+ resultado;
